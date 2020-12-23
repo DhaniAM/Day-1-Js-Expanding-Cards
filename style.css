@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 95%;
+  width: 95%;
+}
+
+.container .item {
+  border: 1px solid lightslategray;
+  height: 95%;
+  margin: 0 10px;
+  background-size: cover;
+  background-position: 50% 50%;
+  border-radius: 100px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-transition: -webkit-box-flex 1s ease-in-out;
+  transition: -webkit-box-flex 1s ease-in-out;
+  transition: flex 1s ease-in-out;
+  transition: flex 1s ease-in-out, -webkit-box-flex 1s ease-in-out, -ms-flex 1s ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+
+.container .item.item-1 {
+  background-image: url("1.jpg");
+}
+
+.container .item.item-2 {
+  background-image: url("2.jpg");
+}
+
+.container .item.item-3 {
+  background-image: url("3.jpg");
+}
+
+.container .item.item-4 {
+  background-image: url("4.jpg");
+}
+
+.container .item.item-5 {
+  background-image: url("5.jpg");
+}
+
+.container .item p {
+  color: rgba(255, 255, 255, 0.775);
+  font-family: "Open Sans", sans-serif;
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 0.2mm;
+  line-height: 20mm;
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  opacity: 0;
+}
+
+.container .item.active {
+  -webkit-box-flex: 20;
+      -ms-flex: 20;
+          flex: 20;
+}
+
+.container .item.active p {
+  opacity: 1;
+  -webkit-transition: opacity 1s ease-in 0.7s;
+  transition: opacity 1s ease-in 0.7s;
+}
+
+@media (max-width: 768px) {
+  .container .item {
+    margin: 0 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .container .item {
+    width: 95%;
+    height: auto;
+    margin: 10px 0;
+  }
+  .container .item p {
+    font-size: 30px;
+    bottom: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
